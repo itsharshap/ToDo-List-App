@@ -1,0 +1,144 @@
+/* ========================
+   Elegant Todo List Styles
+   ======================== */
+
+/* CSS Variables for Theme */
+:root {
+    --primary-color: #5e60ce;
+    --accent-color: #f1f3f5;
+    --completed-color: #adb5bd;
+    --text-color: #2f2f2f;
+    --bg-color: #ffffff;
+    --card-bg: #fafafa;
+    --border-radius: 10px;
+    --shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Reset and Base Styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+  }
+  
+  body {
+    background: linear-gradient(135deg, #dee2ff, #edf2ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--text-color);
+  }
+  
+  .container {
+    background-color: var(--bg-color);
+    padding: 2.5rem 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 550px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  h1 {
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Input Section */
+  .input-section {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.75rem;
+  }
+  
+  #todo-input {
+    flex: 1;
+    padding: 0.65rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: border 0.2s ease;
+  }
+  
+  #todo-input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+  }
+  
+  #add-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.65rem 1.25rem;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  #add-btn:hover {
+    background-color: #4a4fc1;
+  }
+  
+  /* Todo List */
+  #todo-list {
+    list-style: none;
+  }
+  
+  .todo-item {
+    background-color: var(--card-bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.9rem 1rem;
+    margin-bottom: 0.75rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease;
+  }
+  
+  .todo-item:hover {
+    transform: translateY(-2px);
+  }
+  
+  .todo-item.completed .text {
+    text-decoration: line-through;
+    color: var(--completed-color);
+  }
+  
+  /* Text and Actions */
+  .todo-item .text {
+    flex: 1;
+    margin-left: 0.75rem;
+    font-size: 1rem;
+  }
+  
+  .todo-item input[type="checkbox"] {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: 0.5rem;
+  }
+  
+  .actions button {
+    background: none;
+    border: none;
+    color: #ff6b6b;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .actions button:hover {
+    transform: scale(1.2);
+  }
+  
